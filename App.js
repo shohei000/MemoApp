@@ -1,36 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
+import Appbar from './src/components/Appbar';
+import MemoList from './src/components/MemoList';
+import CircleButton from './src/elements/CircleButton';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
 
-        <View style={styles.appbar}>
-          <View>
-            <Text style={styles.appbarTitel}>MEMOT</Text>
-          </View>
-        </View>
+        <Appbar />
 
-        <View style={styles.memoList}>
-          <View style={styles.memoListItem}>
-            <Text style={styles.memoTitle}>講座のアイテム</Text>
-            <Text style={styles.memoDate}>2017/10/10</Text>
-          </View>
-          <View style={styles.memoListItem}>
-            <Text style={styles.memoTitle}>講座のアイテム</Text>
-            <Text style={styles.memoDate}>2017/10/10</Text>
-          </View>
-          <View style={styles.memoListItem}>
-            <Text style={styles.memoTitle}>講座のアイテム</Text>
-            <Text style={styles.memoDate}>2017/10/10</Text>
-          </View>
-        </View>
+        <MemoList />
 
-        <View style={styles.memoAddButton}>
-          <Text style={styles.memoAddButtonTitle}>＋</Text>
-        </View>
+        <CircleButton>＋</CircleButton>
 
       </View>
     );
@@ -64,43 +48,5 @@ const styles = StyleSheet.create({
     fontSize: 32,
     lineHeight: 32,
     color: '#fff',
-  },
-  memoList: {
-    width: '100%',
-    flex: 1,
-  },
-  memoListItem: {
-    padding: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: '#ddd',
-    backgroundColor: '#FFF',
-  },
-  memoTitle: {
-    fontSize: 18,
-    marginBottom: 4,
-  },
-  memoDate: {
-    fontSize: 12,
-    color: '#a2a2a2',
-  },
-  appbar: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    height: 60,
-    paddingTop: 10,
-    backgroundColor: '#265366',
-    justifyContent: 'center',
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 0 },
-    shadowOpacity: 0.5,
-    shadowRadius: 3,
-    zIndex: 10,
-  },
-  appbarTitel: {
-    color: '#fff',
-    fontSize: 18,
   },
 });
