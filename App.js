@@ -2,14 +2,14 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import Appbar from './src/components/Appbar';
-import MemoDetailScreen from './src/screens/MemoDetailScreen';
+import MemoEditScreen from './src/screens/MemoEditScreen';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
         <Appbar />
-        <MemoDetailScreen />
+        <MemoEditScreen />
       </View>
     );
   }
@@ -20,27 +20,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#FFFDF6',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     paddingTop: 60,
-  },
-  memoAddButton: {
-    position: 'absolute',
-    bottom: 32,
-    right: 32,
-    width: 48,
-    height: 48,
-    backgroundColor: '#E31676',
-    borderRadius: 24,
-    justifyContent: 'center',
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 3,
-  },
-  memoAddButtonTitle: {
-    fontSize: 32,
-    lineHeight: 32,
-    color: '#fff',
   },
 });
